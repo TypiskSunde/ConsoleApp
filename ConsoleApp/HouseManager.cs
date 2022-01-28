@@ -27,6 +27,7 @@ namespace ConsoleApp
             Console.WriteLine("2 search");
             Console.WriteLine("3 view all rooms");
             Console.WriteLine("4 delete rooms");
+            Console.WriteLine("5 sum of all rooms in square feet");
             Console.WriteLine("Press 'x' to exit");
             var userInput = Console.ReadLine();
             UserInputLoop(userInput);
@@ -41,6 +42,7 @@ namespace ConsoleApp
                 case "2": _house.SearchRoom(); break;
                 case "3": _house.DisplayAllRoom(); break;
                 case "4": _house.DeleteRooms(); break;
+                case "5": _house.SumAllRoomInFeet(); break;
                 case "x": return;
                 default: Console.WriteLine("Select valid operation"); break;
             }

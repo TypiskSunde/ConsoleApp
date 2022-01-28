@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Formats.Asn1;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Schema;
 
 namespace ConsoleApp
 {
@@ -71,6 +73,19 @@ namespace ConsoleApp
             index = Convert.ToInt32(Console.ReadLine());
             if (index < 0 || index >= _rooms.Count()) return;
             _rooms.RemoveAt(index);
+        }
+
+        public void SumAllRoomInFeet()
+        {
+            var totalArea = 0;
+            foreach (var room in _rooms)
+            {
+
+                totalArea += room.Area;
+
+            }
+            
+            Console.WriteLine("Your total square feet is " + totalArea);
         }
     }
 }
